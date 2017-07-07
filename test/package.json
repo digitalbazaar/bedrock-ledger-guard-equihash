@@ -1,0 +1,29 @@
+{
+  "name": "bedrock-ledger-guard-equihash-test",
+  "version": "0.0.1-0",
+  "private": true,
+  "description": "bedrock-ledger-guard-equihash-test",
+  "main": "./lib",
+  "scripts": {
+    "test": "node --preserve-symlinks test test",
+    "watch": "grunt watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/digitalbazaar/bedrock-ledger-guard-equihash.git"
+  },
+  "bugs": {
+    "url": "https://github.com/digitalbazaar/bedrock-ledger-guard-equihash/issues"
+  },
+  "homepage": "https://github.com/digitalbazaar/bedrock-ledger-guard-equihash#readme",
+  "dependencies": {
+    "async": "^2.4.1",
+    "bedrock": "^1.4.1",
+    "bedrock-ledger": "digitalbazaar/bedrock-ledger#cm3",
+    "bedrock-ledger-context": "digitalbazaar/bedrock-ledger-context#master",
+    "bedrock-mongodb": "^3.2.3",
+    "bedrock-permission": "^2.4.3",
+    "bedrock-test": "^1.2.0",
+    "grunt": "^1.0.1",
+  }
+}
