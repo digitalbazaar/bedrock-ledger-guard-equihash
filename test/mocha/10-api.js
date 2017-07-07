@@ -7,24 +7,22 @@
 
 const bedrock = require('bedrock');
 const async = require('async');
-const brSignatureGuard = require('bedrock-ledger-guard-signature');
+const brSignatureGuard = require('bedrock-ledger-guard-equihash');
 const expect = global.chai.expect;
-const jsigs = require('jsonld-signatures');
-jsigs.use('jsonld', bedrock.jsonld);
 
 const mockData = require('./mock.data');
 
 describe('isValid API', () => {
   describe('WebLedgerEvent', () => {
-    it('validates a propery signed event', done => {
+    it('validates a valid proof', done => {
       async.auto({
         generateProof: callback => generateEquihashSolution({
           n: 64,
           k: 3,
           doc: mockData.events.alpha
         }, callback),
-        check: ['signEvent', (results, callback) => brSignatureGuard.isValid(
-          results.generateProof,
+        check: ['generateProof', (results, callback) =>
+          brSignatureGuard.isValid(results.generateProof,
           mockData.ledgers.alpha.config.input[0].validationEventGuard[0],
           (err, result) => {
             should.not.exist(err);
