@@ -24,6 +24,8 @@
     "bedrock-mongodb": "^3.2.3",
     "bedrock-permission": "^2.4.3",
     "bedrock-test": "^1.2.0",
-    "grunt": "^1.0.1"
+    "equihash": "digitalbazaar/equihash#implementation",
+    "grunt": "^1.0.1",
+    "lodash": "4.17.4"
   }
 }
