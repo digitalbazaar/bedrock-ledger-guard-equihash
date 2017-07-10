@@ -25,14 +25,15 @@ describe('isValid API', () => {
           doc: mockData.events.alpha
         }, callback),
         check: ['sign', (results, callback) =>
-          brSignatureGuard.isValid(results.sign,
-          mockData.ledgers.alpha.config.input[0].validationEventGuard[0],
-          (err, result) => {
-            should.not.exist(err);
-            expect(result).to.be.a('boolean');
-            result.should.be.true;
-            callback();
-          })
+          brSignatureGuard.isValid(
+            results.sign,
+            mockData.ledgers.alpha.config.input[0].validationEventGuard[0],
+            (err, result) => {
+              should.not.exist(err);
+              expect(result).to.be.a('boolean');
+              result.should.be.true;
+              callback();
+            })
         ]
       }, done);
     });
@@ -46,14 +47,15 @@ describe('isValid API', () => {
         check: ['sign', (results, callback) => {
           results.sign.signature.signatureValue =
             results.sign.signature.signatureValue.replace('A', 'B');
-          brSignatureGuard.isValid(results.sign,
-          mockData.ledgers.alpha.config.input[0].validationEventGuard[0],
-          (err, result) => {
-            should.not.exist(err);
-            expect(result).to.be.a('boolean');
-            result.should.be.false;
-            callback();
-          });
+          brSignatureGuard.isValid(
+            results.sign,
+            mockData.ledgers.alpha.config.input[0].validationEventGuard[0],
+            (err, result) => {
+              should.not.exist(err);
+              expect(result).to.be.a('boolean');
+              result.should.be.false;
+              callback();
+            });
         }]
       }, done);
     });
@@ -85,7 +87,8 @@ function equihashSignature(options, callback) {
         signatureValue: Buffer.from(results.proof.value).toString('base64')
       };
       callback(null, signed);
-  }]}, (err, results) => {
+    }]
+  }, (err, results) => {
     if(err) {
       return callback(err);
     }
