@@ -2,9 +2,7 @@ const mock = {};
 module.exports = mock;
 
 const ledgers = mock.ledgers = {};
-const blocks = mock.blocks = {};
 const events = mock.events = {};
-const keys = mock.keys = {};
 
 ledgers.alpha = {
   config: {
@@ -14,11 +12,9 @@ ledgers.alpha = {
     input: [{
       type: 'WebLedgerConfiguration',
       ledger: 'did:v1:c02915fc-672d-4568-8e6e-b12a0b35cbb3',
-      consensusMethod: {
-        type: 'UnilateralConsensus2017'
-      },
-      validationEventGuard: [{
-        type: 'EquihashGuard2017',
+      consensusMethod: 'UnilateralConsensus2017',
+      eventValidator: [{
+        type: 'EquihashValidator2017',
         eventFilter: [{
           type: 'EventTypeFilter',
           eventType: ['WebLedgerEvent']

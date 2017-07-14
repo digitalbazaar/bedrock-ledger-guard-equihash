@@ -26,7 +26,7 @@ describe('isValid API', () => {
         check: ['sign', (results, callback) =>
           brSignatureGuard.isValid(
             results.sign,
-            mockData.ledgers.alpha.config.input[0].validationEventGuard[0],
+            mockData.ledgers.alpha.config.input[0].eventValidator[0],
             (err, result) => {
               should.not.exist(err);
               expect(result).to.be.a('boolean');
@@ -48,7 +48,7 @@ describe('isValid API', () => {
             results.sign.signature.signatureValue.replace('A', 'B');
           brSignatureGuard.isValid(
             results.sign,
-            mockData.ledgers.alpha.config.input[0].validationEventGuard[0],
+            mockData.ledgers.alpha.config.input[0].eventValidator[0],
             (err, result) => {
               should.not.exist(err);
               expect(result).to.be.a('boolean');
