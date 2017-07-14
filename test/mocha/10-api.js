@@ -5,7 +5,6 @@
 
 'use strict';
 
-const _ = require('lodash');
 const bedrock = require('bedrock');
 const async = require('async');
 const brSignatureGuard = require('bedrock-ledger-guard-equihash');
@@ -78,7 +77,7 @@ function equihashSignature(options, callback) {
       equihash.solve(hash, equihashOptions, callback);
     }],
     sign: ['proof', (results, callback) => {
-      const signed = _.cloneDeep(options.doc);
+      const signed = bedrock.util.clone(options.doc);
       signed.signature = {
         type: 'EquihashSignature2017',
         equihashParameterN: results.proof.n,

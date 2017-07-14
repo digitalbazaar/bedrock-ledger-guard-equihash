@@ -25,7 +25,6 @@
     "bedrock-permission": "^2.4.3",
     "bedrock-test": "^1.2.0",
     "equihash": "digitalbazaar/equihash#implementation",
-    "grunt": "^1.0.1",
-    "lodash": "4.17.4"
+    "grunt": "^1.0.1"
   }
 }
