@@ -3,7 +3,6 @@
   "version": "0.0.1-0",
   "private": true,
   "description": "bedrock-ledger-guard-equihash-test",
-  "main": "./lib",
   "scripts": {
     "test": "node --preserve-symlinks test test",
     "watch": "grunt watch"
@@ -24,7 +23,8 @@
     "bedrock-mongodb": "^3.2.3",
     "bedrock-permission": "^2.4.3",
     "bedrock-test": "^1.2.0",
-    "equihash": "digitalbazaar/equihash#implementation",
+    "bedrock-validation": "^2.2.1",
+    "equihash-signature": "digitalbazaar/equihash-signature#implementation",
     "grunt": "^1.0.1"
   }
 }
