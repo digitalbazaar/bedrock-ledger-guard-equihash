@@ -1,16 +1,16 @@
 {
-  "name": "bedrock-ledger-guard-equihash",
+  "name": "bedrock-ledger-validator-equihash",
   "version": "0.0.1-0",
-  "description": "bedrock-ledger-guard-equihash",
+  "description": "bedrock-ledger-validator-equihash",
   "main": "lib",
   "repository": {
     "type": "git",
-    "url": "https://github.com/digitalbazaar/bedrock-ledger-guard-equihash.git"
+    "url": "https://github.com/digitalbazaar/bedrock-ledger-validator-equihash.git"
   },
   "bugs": {
-    "url": "https://github.com/digitalbazaar/bedrock-ledger-guard-equihash/issues"
+    "url": "https://github.com/digitalbazaar/bedrock-ledger-validator-equihash/issues"
   },
-  "homepage": "https://github.com/digitalbazaar/bedrock-ledger-guard-equihash#readme",
+  "homepage": "https://github.com/digitalbazaar/bedrock-ledger-validator-equihash#readme",
   "dependencies": {
   },
   "peerDependencies": {

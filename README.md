@@ -1,6 +1,6 @@
-# bedrock-ledger-guard-equihash
+# bedrock-ledger-validator-equihash
 
-[![Build Status](https://ci.digitalbazaar.com/buildStatus/icon?job=bedrock-ledger-guard-equihash)](https://ci.digitalbazaar.com/job/bedrock-ledger-guard-equihash)
+[![Build Status](https://ci.digitalbazaar.com/buildStatus/icon?job=bedrock-ledger-validator-equihash)](https://ci.digitalbazaar.com/job/bedrock-ledger-validator-equihash)
 
 A validator for bedrock-ledger that determines if Equihash solutions
 on a document satisfy the requirements defined in the the
@@ -16,7 +16,7 @@ For documentation on configuration, see [config.js](./lib/config.js).
 
 ## Usage Example
 ```javascript
-const brValidator = require('bedrock-ledger-guard-equihash');
+const brValidator = require('bedrock-ledger-validator-equihash');
 
 const validatorConfig = {
   type: 'EquihashValidator2017',

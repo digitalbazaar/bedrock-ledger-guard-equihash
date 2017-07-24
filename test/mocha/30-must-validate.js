@@ -5,7 +5,7 @@
 
 'use strict';
 
-const brValidator = require('bedrock-ledger-guard-equihash');
+const brValidator = require('bedrock-ledger-validator-equihash');
 const mockData = require('./mock.data');
 
 describe('mustValidateEvent API', () => {

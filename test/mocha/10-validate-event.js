@@ -6,7 +6,7 @@
 'use strict';
 
 const async = require('async');
-const brValidator = require('bedrock-ledger-guard-equihash');
+const brValidator = require('bedrock-ledger-validator-equihash');
 const equihashSigs = require('equihash-signature');
 
 const mockData = require('./mock.data');
