@@ -18,6 +18,7 @@
   "dependencies": {
     "async": "^2.4.1",
     "bedrock": "^1.4.1",
+    "bedrock-jobs": "^2.0.3",
     "bedrock-ledger": "digitalbazaar/bedrock-ledger#cm3",
     "bedrock-ledger-context": "digitalbazaar/bedrock-ledger-context#master",
     "bedrock-mongodb": "^3.2.3",
