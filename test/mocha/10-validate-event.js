@@ -26,6 +26,8 @@ describe('validateEvent API', () => {
           results.sign,
           testConfig,
           err => {
+            // FIXME: Remove logging
+            console.log('ERROR', JSON.stringify(err, null, 2));
             should.not.exist(err);
             callback();
           })
