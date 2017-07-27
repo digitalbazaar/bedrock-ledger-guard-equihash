@@ -33,7 +33,7 @@ const schema = {
         },
         additionalProperties: false
       },
-      required: true
+      required: false
     },
     equihashParameterK: {
       type: 'integer',
