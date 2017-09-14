@@ -12,11 +12,11 @@
   },
   "homepage": "https://github.com/digitalbazaar/bedrock-ledger-validator-equihash#readme",
   "dependencies": {
+    "equihash-signature": "github:digitalbazaar/equihash-signature#implementation"
   },
   "peerDependencies": {
     "bedrock": "^1.4.1",
     "bedrock-ledger-node": "^0.3.5",
-    "bedrock-validation": "^2.2.1",
-    "equihash-signature": "digitalbazaar/equihash-signature#implementation"
+    "bedrock-validation": "^2.2.1"
   }
 }
