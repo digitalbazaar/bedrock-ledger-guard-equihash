@@ -16,7 +16,7 @@
     "bedrock-permission": "^2.4.3",
     "bedrock-test": "^1.2.0",
     "bedrock-validation": "^2.2.1",
-    "equihash-signature": "digitalbazaar/equihash-signature#implementation",
+    "equihash-signature": "digitalbazaar/equihash-signature#wip",
     "grunt": "^1.0.1"
   }
 }
