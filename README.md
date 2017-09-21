@@ -49,11 +49,11 @@ const signedDocument = {
     }
   ],
   "signature": {
-    "type": "EquihashSignature2017",
+    "type": "EquihashProof2017",
     "equihashParameterN": 64,
     "equihashParameterK": 3,
-    "nonce": 3,
-    "signatureValue": "IyEQBDNGEMt0YMpVQgrn...HF9FZpyDlFw=="
+    'nonce': 'MTIzNA==',
+    "proofValue": "IyEQBDNGEMt0YMpVQgrn...HF9FZpyDlFw=="
   }
 }
 

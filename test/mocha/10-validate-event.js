@@ -42,8 +42,8 @@ describe('validateEvent API', () => {
           doc: mockData.events.alpha
         }, callback),
         check: ['sign', (results, callback) => {
-          results.sign.signature.signatureValue =
-            results.sign.signature.signatureValue.replace('A', 'B');
+          results.sign.signature.proofValue =
+            results.sign.signature.proofValue.replace('A', 'B');
           brValidator.validateEvent(results.sign, testConfig, err => {
             should.exist(err);
             err.name.should.equal('ValidationError');
