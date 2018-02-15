@@ -12,7 +12,7 @@ describe('mustValidateEvent API', () => {
   it('should return true on a WebLedgerEvent event', done => {
     const event = mockData.events.alpha;
     const testConfig =
-      mockData.ledgers.alpha.config.input[0].eventValidator[0];
+      mockData.configs.equihash.ledgerConfiguration.eventValidator[0];
     brValidator.mustValidateEvent(event, testConfig, (err, result) => {
       should.not.exist(err);
       should.exist(result);

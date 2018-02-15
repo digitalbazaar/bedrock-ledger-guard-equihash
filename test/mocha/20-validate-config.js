@@ -12,7 +12,8 @@ const mockData = require('./mock.data');
 
 describe('validateConfiguration API', () => {
   it('validates a proper config', done => {
-    const testConfig = mockData.ledgers.alpha.config.input[0].eventValidator[0];
+    const testConfig =
+      mockData.configs.equihash.ledgerConfiguration.eventValidator[0];
     brValidator.validateConfiguration(testConfig, err => {
       should.not.exist(err);
       done();
@@ -20,7 +21,7 @@ describe('validateConfiguration API', () => {
   });
   it('return ValidationError on missing equihashParameterN', done => {
     const testConfig = bedrock.util.clone(
-      mockData.ledgers.alpha.config.input[0].eventValidator[0]);
+      mockData.configs.equihash.ledgerConfiguration.eventValidator[0]);
     delete testConfig.equihashParameterN;
     brValidator.validateConfiguration(testConfig, err => {
       should.exist(err);
@@ -30,7 +31,7 @@ describe('validateConfiguration API', () => {
   });
   it('return ValidationError on missing equihashParameterK', done => {
     const testConfig = bedrock.util.clone(
-      mockData.ledgers.alpha.config.input[0].eventValidator[0]);
+      mockData.configs.equihash.ledgerConfiguration.eventValidator[0]);
     delete testConfig.equihashParameterK;
     brValidator.validateConfiguration(testConfig, err => {
       should.exist(err);
