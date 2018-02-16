@@ -1,5 +1,5 @@
 /*!
- * Copyright (c) 2017 Digital Bazaar, Inc. All rights reserved.
+ * Copyright (c) 2017-2018 Digital Bazaar, Inc. All rights reserved.
  */
 const bedrock = require('bedrock');
 
@@ -10,11 +10,11 @@ const schema = {
   properties: {
     type: {
       type: 'string',
-      enum: ['EquihashValidator2017'],
+      enum: ['EquihashValidator2018'],
       required: true
     },
-    eventFilter: {
-      title: 'Event Filter',
+    validatorFilter: {
+      title: 'Type Filter',
       type: 'array',
       items: {
         type: 'object',
@@ -23,7 +23,7 @@ const schema = {
             type: 'string',
             required: true
           },
-          eventType: {
+          validatorFilterByType: {
             type: 'array',
             items: {
               type: 'string'

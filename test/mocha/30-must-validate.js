@@ -1,19 +1,25 @@
-/*
- * Copyright (c) 2017 Digital Bazaar, Inc. All rights reserved.
+/*!
+ * Copyright (c) 2017-2018 Digital Bazaar, Inc. All rights reserved.
  */
 /* globals should */
 
 'use strict';
 
+const bedrock = require('bedrock');
 const brValidator = require('bedrock-ledger-validator-equihash');
+const equihashSigs = require('equihash-signature');
+const jsigs = require('jsonld-signatures');
+jsigs.use('jsonld', bedrock.jsonld);
+equihashSigs.install(jsigs);
+
 const mockData = require('./mock.data');
 
-describe('mustValidateEvent API', () => {
-  it('should return true on a WebLedgerEvent event', done => {
-    const event = mockData.events.alpha;
+describe('mustValidate API', () => {
+  it('should return true on an operation', done => {
+    const operation = mockData.operations.alpha;
     const testConfig =
-      mockData.configs.equihash.ledgerConfiguration.eventValidator[0];
-    brValidator.mustValidateEvent(event, testConfig, (err, result) => {
+      mockData.ledgerConfigurations.equihash.operationValidator[0];
+    brValidator.mustValidate(operation, testConfig, (err, result) => {
       should.not.exist(err);
       should.exist(result);
       result.should.be.a('boolean');
