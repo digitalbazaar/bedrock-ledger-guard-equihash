@@ -1,8 +1,6 @@
 /*!
  * Copyright (c) 2017-2018 Digital Bazaar, Inc. All rights reserved.
  */
-/* globals should */
-
 'use strict';
 
 const bedrock = require('bedrock');
@@ -19,7 +17,7 @@ describe('validateConfiguration API', () => {
     const testConfig =
       mockData.ledgerConfigurations.equihash.operationValidator[0];
     brValidator.validateConfiguration(testConfig, err => {
-      should.not.exist(err);
+      assertNoError(err);
       done();
     });
   });

@@ -1,8 +1,6 @@
 /*!
  * Copyright (c) 2017-2018 Digital Bazaar, Inc. All rights reserved.
  */
-/* globals should */
-
 'use strict';
 
 const async = require('async');
@@ -33,7 +31,7 @@ describe('validate API', () => {
           results.sign,
           testConfig,
           err => {
-            should.not.exist(err);
+            assertNoError(err);
             callback();
           })
         ]

@@ -1,8 +1,6 @@
 /*!
  * Copyright (c) 2017-2018 Digital Bazaar, Inc. All rights reserved.
  */
-/* globals should */
-
 'use strict';
 
 const bedrock = require('bedrock');
@@ -20,7 +18,7 @@ describe('mustValidate API', () => {
     const testConfig =
       mockData.ledgerConfigurations.equihash.operationValidator[0];
     brValidator.mustValidate(operation, testConfig, (err, result) => {
-      should.not.exist(err);
+      assertNoError(err);
       should.exist(result);
       result.should.be.a('boolean');
       result.should.be.true;
