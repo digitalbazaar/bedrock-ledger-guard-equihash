@@ -13,7 +13,7 @@
   "homepage": "https://github.com/digitalbazaar/bedrock-ledger-validator-equihash#readme",
   "dependencies": {
     "async": "^2.6.0",
-    "equihash-signature": "github:digitalbazaar/equihash-signature#wip"
+    "equihash-signature": "github:digitalbazaar/equihash-signature#master"
   },
   "peerDependencies": {
     "bedrock": "^1.4.1",
