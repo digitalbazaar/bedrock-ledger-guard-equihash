@@ -4,7 +4,7 @@
 const bedrock = require('bedrock');
 
 const schema = {
-  title: 'Bedrock Ledger Signature Validator Config',
+  title: 'Bedrock Ledger Equihash Validator Config',
   required: true,
   type: 'object',
   properties: {

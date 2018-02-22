@@ -10,7 +10,7 @@
     "async": "^2.4.1",
     "bedrock": "^1.8.0",
     "bedrock-jobs": "^2.0.3",
-    "bedrock-ledger-context": "digitalbazaar/bedrock-ledger-context#continuityUpdate",
+    "bedrock-ledger-context": "digitalbazaar/bedrock-ledger-context#master",
     "bedrock-ledger-node": "digitalbazaar/bedrock-ledger-node#master",
     "bedrock-mongodb": "^4.0.0",
     "bedrock-permission": "^2.4.3",
